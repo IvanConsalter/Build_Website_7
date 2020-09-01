@@ -111,6 +111,12 @@ p {
     background: var(--color-primary-light);
 }
 
+.clearfix::after, .clearfix::before {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 /* HEADER */
 header {
     min-height: 100vh;
@@ -187,4 +193,17 @@ header .banner-btn {
 
 .skill:hover .skill-icon {
     transform: translateY(-5px);
+}
+
+@media screen and (min-width: 576px) {
+    .skill {
+        float: left;
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .skill {
+        width: 25%;
+    }
 }

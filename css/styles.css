@@ -148,3 +148,9 @@ header .banner-btn {
     font-size: 1.25rem;
     padding: 1rem 1.7rem;
 }
+
+/* CONTENT DIVIDER */
+.content-divider {
+    height: 0.5rem;
+    background: linear-gradient(to left, var(--color-primary), #e9b949, var(--color-primary));
+}

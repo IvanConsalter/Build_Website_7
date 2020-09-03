@@ -133,6 +133,76 @@ p {
     max-width: 1170px;
 }
 
+/* ANIMATION */
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.4);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes sliderFromRight {
+    0% {
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(-200px);
+        opacity: 0.5;
+    }
+    75% {
+        transform: translateX(50px);
+        opacity: 0.75;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes sliderFromLeft {
+    0% {
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(200px);
+        opacity: 0.5;
+    }
+    75% {
+        transform: translateX(-50px);
+        opacity: 0.75;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes show {
+    0% {
+        transform: scale(0.6);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    75% {
+        transform: scale(1.3);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 /* NAVBAR */
 .nav-btn {
     position: fixed;
@@ -142,6 +212,7 @@ p {
     color: var(--color-primary);
     z-index: 1;
     cursor: pointer;
+    animation: bounce 3s ease infinite
 }
 
 .navbar {
@@ -217,6 +288,7 @@ header .banner {
 header .banner h2 {
     font-family: var(--font-secondary);
     color: var(--color-primary);
+    animation: sliderFromRight 5s ease-in-out 1;
 }
 
 header .banner h1 {
@@ -224,6 +296,7 @@ header .banner h1 {
     color: var(--color-white);
     margin-top: 1.25rem;
     margin-bottom: 2rem;
+    animation: sliderFromLeft 5s ease-in-out 1;
 }
 
 header .banner-btn {
@@ -231,6 +304,7 @@ header .banner-btn {
     outline-offset: 0.25rem;
     font-size: 1.25rem;
     padding: 1rem 1.7rem;
+    animation: show 5s linear 1;
 }
 
 /* CONTENT DIVIDER */

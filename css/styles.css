@@ -152,6 +152,13 @@ p {
     z-index: 2;
     width: 60%;
     height: 100vh;
+    box-shadow: 2px 0 2px rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    transition: var(--transition);
+}
+
+.show-nav {
+    transform: translate(0);
 }
 
 .navbar-header {
